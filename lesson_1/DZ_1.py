@@ -11,18 +11,25 @@
 # duration = 400153
 # 4 дн 15 час 9 мин 13 сек
 
-# Для проверки кода
-duration = int(input("Введите время в секундах для проверки:"))
-# Выводим значение если у нас меньше минуты
-if duration < 60:
-    print(f"{duration} сек")
-# Выводим значение если есть минуты
-elif 60 <= duration < 3600:
-    print(f"{duration // 60} минут {duration % 60} секунд")
-# Выводим значения если есть часы
-elif 3600 <= duration < 86400:
-    print(f"{duration // 3600} часов {(duration % 3600) // 60} минут {duration % 60} секунд")
-# Выводим значения если есть дни
-else:
-    print(f"{duration // 86400} дней {(duration // 3600) % 24} часов {(duration % 3600) // 60}"
-          f" минут {duration % 60} секунд")
+# Для проверки кода самостоятельный ввод
+# duration = int(input("Введите время в секундах для проверки:"))
+
+# Через список и цикл проверка
+lst_duration = []
+for el in range(10, 120000, 45):
+    lst_duration.append(el)
+
+for duration in lst_duration:
+    # Выводим значение если у нас меньше минуты
+    if duration < 60:
+        print(f"{duration} сек")
+    # Выводим значение если есть минуты
+    elif 60 <= duration < 3600:
+        print(f"{duration // 60} минут {duration % 60} секунд")
+    # Выводим значения если есть часы
+    elif 3600 <= duration < 86400:
+        print(f"{duration // 3600} часов {(duration % 3600) // 60} минут {duration % 60} секунд")
+    # Выводим значения если есть дни
+    else:
+        print(f"{duration // 86400} дней {(duration // 3600) % 24} часов {(duration % 3600) // 60}"
+              f" минут {duration % 60} секунд")
