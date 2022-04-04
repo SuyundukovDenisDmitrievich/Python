@@ -21,7 +21,7 @@ for el in range(10, 120000, 45):
 
 for duration in lst_duration:
     # Выводим значение если у нас меньше минуты
-    if duration < 60:
+    if 0 < duration < 60:
         print(f"{duration} сек")
     # Выводим значение если есть минуты
     elif 60 <= duration < 3600:
@@ -30,6 +30,8 @@ for duration in lst_duration:
     elif 3600 <= duration < 86400:
         print(f"{duration // 3600} часов {(duration % 3600) // 60} минут {duration % 60} секунд")
     # Выводим значения если есть дни
+    elif duration < 0:
+        print("Время не может иметь отрицательного значения"
     else:
         print(f"{duration // 86400} дней {(duration // 3600) % 24} часов {(duration % 3600) // 60}"
               f" минут {duration % 60} секунд")
