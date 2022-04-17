@@ -5,7 +5,7 @@
 # Проверка через функцию
 def transform_string(number: int) -> str:
     verif_num_1 = number % 10
-    if number == 1 or number % 10 == 1:
+    if number != 11 and number % 10 == 1:
         text = f"{number} процент"
     elif 2 <= number <= 4 or 2 <= verif_num_1 <= 4:
         text = f"{number} процента"
